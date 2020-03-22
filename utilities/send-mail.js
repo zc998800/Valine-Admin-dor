@@ -34,7 +34,7 @@ exports.notice = (comment) => {
         return;
     }
 
-    let emailSubject = '🎀 哇！「' + process.env.SITE_NAME + '」上有新评论啦，快点我！ 💖';
+    let emailSubject = '🚩 哇！「' + process.env.SITE_NAME + '」上有新评论啦';
     let emailContent =  noticeTemplate({
                             siteName: process.env.SITE_NAME,
                             siteUrl: process.env.SITE_URL,
@@ -70,7 +70,7 @@ exports.send = (currentComment, parentComment)=> {
         || parentComment.get('mail') === process.env.SMTP_USER) {
         return;
     }
-    let emailSubject = '🎀 咦？「' + process.env.SITE_NAME + '」上有人回复了你了哦 💖';
+    let emailSubject = '📌 哇！「' + process.env.SITE_NAME + '」上有人回复了你啦！快点我！💦';
     let emailContent = sendTemplate({
                             siteName: process.env.SITE_NAME,
                             siteUrl: process.env.SITE_URL,
